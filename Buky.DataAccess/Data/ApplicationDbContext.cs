@@ -1,7 +1,7 @@
-﻿using Bukworm.Models;
+﻿using Buky.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Bukworm.Data
+namespace Buky.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {

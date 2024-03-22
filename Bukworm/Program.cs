@@ -1,4 +1,4 @@
-using Bukworm.Data;
+using Buky.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

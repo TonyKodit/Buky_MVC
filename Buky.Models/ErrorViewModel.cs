@@ -1,4 +1,4 @@
-namespace Bukworm.Models
+namespace Buky.Models
 {
     public class ErrorViewModel
     {

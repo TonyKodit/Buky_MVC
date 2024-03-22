@@ -5,11 +5,11 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bukworm", "Bukworm\Bukworm.csproj", "{7B4F3468-0176-4574-92CF-A8EBAEB3708C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buky.DataAccess", "Buky.DataAccess\Buky.DataAccess.csproj", "{740FF387-D996-4F62-B45E-EB9A0AFD888B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Buky.DataAccess", "Buky.DataAccess\Buky.DataAccess.csproj", "{740FF387-D996-4F62-B45E-EB9A0AFD888B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buky.Models", "Buky.Models\Buky.Models.csproj", "{9DFE4B94-F084-47F8-BFB0-D9485B61CF59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Buky.Models", "Buky.Models\Buky.Models.csproj", "{9DFE4B94-F084-47F8-BFB0-D9485B61CF59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buky.Utility", "Buky.Utility\Buky.Utility.csproj", "{CCC1DB66-9675-4ED3-97DD-FDE31B460A0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Buky.Utility", "Buky.Utility\Buky.Utility.csproj", "{CCC1DB66-9675-4ED3-97DD-FDE31B460A0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

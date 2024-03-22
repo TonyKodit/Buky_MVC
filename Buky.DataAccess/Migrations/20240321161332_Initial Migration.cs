@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Bukworm.Migrations
+namespace Buky.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration
