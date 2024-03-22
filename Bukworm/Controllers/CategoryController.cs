@@ -41,7 +41,7 @@ namespace Bukworm.Controllers
             
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Edit(int? id)
         {
             if(id == null || id == 0)
             {
@@ -56,8 +56,15 @@ namespace Bukworm.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit()
+        public IActionResult Edit(Category  obj)
         {
+            if (ModelState.IsValid)
+            {
+                _db.Categories.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
 
         }
 
