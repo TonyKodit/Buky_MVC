@@ -1,0 +1,20 @@
+﻿using Bukworm.Data;
+using Bukworm.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Bukworm.Controllers
+{
+    public class CategoryController : Controller
+    {
+        ApplicationDbContext _db;
+        public CategoryController(ApplicationDbContext db)
+        {
+            _db = db;
+        }
+        public IActionResult Index()
+        {
+            List<Category> objCategoryList = _db.Categories.ToList();
+            return View(objCategoryList);
+        }
+    }
+}
