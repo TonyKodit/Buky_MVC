@@ -3,8 +3,9 @@ using Buky.DataAccess.Repository.IRepository;
 using Buky.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bukworm.Controllers
+namespace Bukworm.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -20,18 +21,18 @@ namespace Bukworm.Controllers
 
         public IActionResult Create()
         {
-            return View();  
+            return View();
         }
 
         [HttpPost]
         public IActionResult Create(Category obj)
         {
-            if(obj.Name == obj.DisplayOrder.ToString())
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
                 ModelState.AddModelError("name", "The Display order cannot exactly match the name");
             }
 
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
 
                 _unitOfWork.Category.Add(obj);
@@ -40,17 +41,17 @@ namespace Bukworm.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-            
-            
+
+
         }
 
         public IActionResult Edit(int? id)
         {
-            if(id == null || id == 0)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
-            Category categoryFromDb = _unitOfWork.Category.Get(u=>u.Id ==id);
+            Category categoryFromDb = _unitOfWork.Category.Get(u => u.Id == id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -59,7 +60,7 @@ namespace Bukworm.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Category  obj)
+        public IActionResult Edit(Category obj)
         {
             if (ModelState.IsValid)
             {
@@ -100,7 +101,7 @@ namespace Bukworm.Controllers
             TempData["success"] = "Category deleted successfully";
 
             return RedirectToAction("Index");
-           
+
 
         }
     }
