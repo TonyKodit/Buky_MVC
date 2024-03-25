@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Buky.Models
 {
@@ -13,10 +14,10 @@ namespace Buky.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string ISBN { get; set; }
-        public string Author { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
+        public string? ISBN { get; set; }
+        public string? Author { get; set; }
         
         [Display(Name ="List Price")]
         [Range(1,1000)]
@@ -33,6 +34,12 @@ namespace Buky.Models
         [Display(Name = "Price for 100+")]
         [Range(1, 1000)]
         public double Price100 { get; set; }
+
+        public int CategoryId { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public Category Category { get; set; }
+        public string ImageUrl { get; set; }
 
     }
 }
